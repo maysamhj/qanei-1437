@@ -54,7 +54,7 @@
                 }
             }
             transition: all .3s;
-            &:hover{
+            &:hover, &.selected{
                 color: #93C90F;
                 
                 svg{
@@ -99,6 +99,144 @@
             }
             & > div:last-of-type{
                 flex: .6;
+            }
+            @media(max-width: 768px){
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            img{
+                
+                width: 100%;
+                max-width: 500px;
+                @media(max-width: 500px){
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+        .bottom-section{
+            margin-top: 50px;
+            ul{
+                list-style: none;
+                margin: 30px;
+                margin-top: 60px;
+                padding: 0;
+                font-size: 15px;
+                @media(max-width: 768px){
+                    margin: 0;
+                    font-size: 12px;
+                }
+                li{
+                    margin: 20px;
+                    @media(max-width: 768px){
+                        margin: 20px 0;
+                    }
+                    svg{
+                        margin-left: 20px;
+                        vertical-align: -5px;
+                    }
+                }
+            }
+        }
+    }
+    .terms-2{
+        overflow: hidden;
+        padding: 0 30px;
+        max-width: 1600px;
+        margin: auto;
+        h2{
+            margin-top: 100px;
+            font-size: 20px;
+            text-align: center;
+            @media(max-width: 768px){
+                font-size: 18px;
+                margin-top: 20px;
+            }
+        }
+        p{
+            font-size: 15px;
+            @media(max-width: 768px){
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        .flex-section{
+            align-items: center;
+            & > div:first-of-type{
+                flex: .4;
+                margin-left: 20px;
+            }
+            & > div:last-of-type{
+                flex: .6;
+            }
+            @media(max-width: 768px){
+                text-align: center;
+            }
+            
+            img{
+                width: 100%;
+                max-width: 500px;
+                display: block;
+                margin: auto;
+                @media(max-width: 500px){
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+        .bottom-section{
+            margin-top: 50px;
+            ul{
+                list-style: none;
+                margin: 30px;
+                margin-top: 60px;
+                padding: 0;
+                font-size: 15px;
+                @media(max-width: 768px){
+                    margin: 0;
+                    font-size: 12px;
+                }
+                li{
+                    margin: 20px;
+                    @media(max-width: 768px){
+                        margin: 20px 0;
+                    }
+                    svg{
+                        margin-left: 20px;
+                        vertical-align: -5px;
+                    }
+                }
+            }
+        }
+    }
+    .terms-3-4{
+        overflow: hidden;
+        padding: 0 30px;
+        max-width: 1600px;
+        margin: auto;
+        h2{
+            margin-top: 100px;
+            font-size: 20px;
+            @media(max-width: 768px){
+                font-size: 18px;
+                margin-top: 20px;
+            }
+        }
+        p{
+            font-size: 15px;
+            @media(max-width: 768px){
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        .flex-section{
+            display: flex;
+            align-items: center;
+            & > div:first-of-type{
+                flex: .6;
+                margin-left: 20px;
+            }
+            & > div:last-of-type{
+                flex: .4;
             }
             @media(max-width: 768px){
                 flex-direction: column;

@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import Landing from './landingComponents/landing';
 import Terms from './termsAndCondition/terms';
+import SignUp from './signUp';
+import SignIn from './signIn';
 
 function App() {
   return (
@@ -19,6 +21,12 @@ function App() {
         <div className="content-section">
         <Router>
               <Switch>
+                <Route path="/signIn">
+                  <SignIn />
+                </Route>
+                <Route path="/signUp">
+                  <SignUp />
+                </Route>
                 <Route path="/terms">
                   <Terms />
                 </Route>

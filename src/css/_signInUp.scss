@@ -1,0 +1,189 @@
+.sign-in, .sign-up{
+    padding: 50px 0;
+  
+    height: auto;
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+    @media(max-width: 1440px){
+        overflow: hidden;
+    }
+    
+   .background-image{
+     
+        .background-img-1{
+            position: absolute;
+            top:100px;
+            left:20px;
+        }
+        .background-img-2{
+            position: absolute;
+            top: 500px;
+            left:90px;
+        }
+        .background-img-3{
+            position: absolute;
+        
+            left: -110px;
+            bottom: -10px;
+
+        }
+        
+        
+        .background-img-7 {
+            position: absolute;
+        
+            top:120px;
+            right:120px; 
+        }
+
+        .background-img-4{
+            position: absolute;
+            top:100px;
+            right:-100px;
+            @media (max-width:1050px){
+                display: none;
+            }
+        }
+   }
+  
+    .flex-container {
+        display:flex;
+       
+       align-items: center;
+       justify-content: center;
+       margin-bottom: -50px;
+      
+       //overflow: hidden;
+        @media (max-width:1050px){
+            flex-direction: column;
+        }
+        
+        &.signup-responsive-container{
+            padding:100px 0;
+            @media (max-width:1050px){
+                flex-direction: column-reverse;
+                padding:0;
+            }
+        }
+       
+        .image-items{
+            
+            margin-right: -300px;
+            margin-bottom: -40px;
+             z-index: 0;
+             @media (max-width:1050px){
+                 margin-right:-20px;
+             }
+            img{
+                width: 100%;
+               
+            }
+             
+        }
+        .image-items-signup-page{
+            
+            margin-left: -150px;
+            
+             z-index: 0;
+             @media (max-width:1050px){
+                 margin-left: 0;
+             }
+            img{
+                width: 100%;
+               
+            }
+             
+        }
+        .form-items{
+            flex: .6;
+            margin-right: -50px;
+            z-index: 1;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           
+            text-align: center;
+            padding: 40px 0;
+            @media (max-width:1050px){
+                width:90%;
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+            &.form-items-signup-page{
+                margin-left:-100px;
+                margin-right: 0;
+                @media (max-width:1050px){
+                    margin-left: 0;
+                }
+            }
+            .input-items{
+                margin: 15px;
+                input{
+            
+                    margin: auto;
+                    width: 70%;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    @media (max-width:1050px){
+                        width: 90%;
+                    }
+                }
+            }
+            .invalid-input{
+                color: #B10000;
+                text-align: right;
+                padding-right: 120px;
+                font-size: 12px;
+                @media (max-width:1050px){
+                   
+                    padding-right: 40px;
+                }
+            }
+            .sign-up-link{
+               display: inline-block;
+                margin: 20px 0;
+                text-align: center;
+                a{
+                display: unset;
+                float: unset;
+                margin-left: unset;
+                }
+             
+            }
+            p{
+                text-align: center;
+           
+            }
+
+            .social-media-btn{
+               
+                justify-content: center;
+                display:flex;
+                border: none;
+                button{
+                    
+                   
+                    background-color: transparent;
+                    border: none;
+                    img{
+                        margin-right: unset;
+                    }
+                }
+            }   
+            .submit-btn{
+                margin: 20px 0;
+                padding:10px 40px;
+                font-size: 16px;
+                font-weight: bold;
+                img{
+                    padding: 0 7px;
+                }
+            }
+    
+           
+        }
+           
+            
+    }
+}

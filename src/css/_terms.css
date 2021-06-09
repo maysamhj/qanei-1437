@@ -72,15 +72,15 @@
   }
 }
 
-.terms .tabs button:hover {
+.terms .tabs button:hover, .terms .tabs button.selected {
   color: #93C90F;
 }
 
-.terms .tabs button:hover svg {
+.terms .tabs button:hover svg, .terms .tabs button.selected svg {
   fill: #93C90F;
 }
 
-.terms .tabs button:hover svg path {
+.terms .tabs button:hover svg path, .terms .tabs button.selected svg path {
   fill: #93C90F;
 }
 
@@ -183,6 +183,199 @@
 }
 
 .terms .terms-1 .bottom-section ul li svg {
+  margin-left: 20px;
+  vertical-align: -5px;
+}
+
+.terms .terms-2 {
+  overflow: hidden;
+  padding: 0 30px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.terms .terms-2 h2 {
+  margin-top: 100px;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-2 h2 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+
+.terms .terms-2 p {
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-2 p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.terms .terms-2 .flex-section {
+  align-items: center;
+}
+
+.terms .terms-2 .flex-section > div:first-of-type {
+  flex: .4;
+  margin-left: 20px;
+}
+
+.terms .terms-2 .flex-section > div:last-of-type {
+  flex: .6;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-2 .flex-section {
+    text-align: center;
+  }
+}
+
+.terms .terms-2 .flex-section img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 500px) {
+  .terms .terms-2 .flex-section img {
+    width: calc(100% - 20px);
+  }
+}
+
+.terms .terms-2 .bottom-section {
+  margin-top: 50px;
+}
+
+.terms .terms-2 .bottom-section ul {
+  list-style: none;
+  margin: 30px;
+  margin-top: 60px;
+  padding: 0;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-2 .bottom-section ul {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.terms .terms-2 .bottom-section ul li {
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-2 .bottom-section ul li {
+    margin: 20px 0;
+  }
+}
+
+.terms .terms-2 .bottom-section ul li svg {
+  margin-left: 20px;
+  vertical-align: -5px;
+}
+
+.terms .terms-3-4 {
+  overflow: hidden;
+  padding: 0 30px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.terms .terms-3-4 h2 {
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-3-4 h2 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+
+.terms .terms-3-4 p {
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-3-4 p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.terms .terms-3-4 .flex-section {
+  display: flex;
+  align-items: center;
+}
+
+.terms .terms-3-4 .flex-section > div:first-of-type {
+  flex: .6;
+  margin-left: 20px;
+}
+
+.terms .terms-3-4 .flex-section > div:last-of-type {
+  flex: .4;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-3-4 .flex-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.terms .terms-3-4 .flex-section img {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 500px) {
+  .terms .terms-3-4 .flex-section img {
+    width: calc(100% - 20px);
+  }
+}
+
+.terms .terms-3-4 .bottom-section {
+  margin-top: 50px;
+}
+
+.terms .terms-3-4 .bottom-section ul {
+  list-style: none;
+  margin: 30px;
+  margin-top: 60px;
+  padding: 0;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-3-4 .bottom-section ul {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.terms .terms-3-4 .bottom-section ul li {
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-3-4 .bottom-section ul li {
+    margin: 20px 0;
+  }
+}
+
+.terms .terms-3-4 .bottom-section ul li svg {
   margin-left: 20px;
   vertical-align: -5px;
 }

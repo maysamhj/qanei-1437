@@ -1,0 +1,188 @@
+.terms .terms-head {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.terms .terms-head img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.terms .terms-head h1 {
+  font-size: 24px;
+}
+
+@media (max-width: 1050px) {
+  .terms .terms-head h1 {
+    font-size: 18px;
+  }
+}
+
+.terms .tabs {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 0 40px 0;
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .terms .tabs {
+    max-width: unset;
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
+
+.terms .tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.terms .tabs button {
+  display: inline-block;
+  background-color: white;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 30px;
+  padding: 50px 20px 20px 20px;
+  flex: 1;
+  margin: 10px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.terms .tabs button svg {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.terms .tabs button svg path {
+  transition: all .3s;
+}
+
+@media (max-width: 768px) {
+  .terms .tabs button svg {
+    width: 40px;
+  }
+}
+
+.terms .tabs button:hover {
+  color: #93C90F;
+}
+
+.terms .tabs button:hover svg {
+  fill: #93C90F;
+}
+
+.terms .tabs button:hover svg path {
+  fill: #93C90F;
+}
+
+@media (max-width: 768px) {
+  .terms .tabs button {
+    width: calc(50vw - 20px);
+    font-size: 11px;
+  }
+}
+
+.terms .terms-1 {
+  overflow: hidden;
+  padding: 0 30px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.terms .terms-1 h2 {
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-1 h2 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+
+.terms .terms-1 p {
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-1 p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.terms .terms-1 .flex-section {
+  display: flex;
+  align-items: center;
+}
+
+.terms .terms-1 .flex-section > div:first-of-type {
+  flex: .4;
+  margin-left: 20px;
+}
+
+.terms .terms-1 .flex-section > div:last-of-type {
+  flex: .6;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-1 .flex-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.terms .terms-1 .flex-section img {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (max-width: 500px) {
+  .terms .terms-1 .flex-section img {
+    width: calc(100% - 20px);
+  }
+}
+
+.terms .terms-1 .bottom-section {
+  margin-top: 50px;
+}
+
+.terms .terms-1 .bottom-section ul {
+  list-style: none;
+  margin: 30px;
+  margin-top: 60px;
+  padding: 0;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-1 .bottom-section ul {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.terms .terms-1 .bottom-section ul li {
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .terms .terms-1 .bottom-section ul li {
+    margin: 20px 0;
+  }
+}
+
+.terms .terms-1 .bottom-section ul li svg {
+  margin-left: 20px;
+  vertical-align: -5px;
+}

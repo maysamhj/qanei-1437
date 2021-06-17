@@ -1,10 +1,5 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Zalam1 from "./images/zalam/zalam-1.png";
 import Zalam2 from "./images/zalam/zalam-2.png";

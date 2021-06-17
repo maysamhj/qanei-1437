@@ -1,0 +1,196 @@
+.book-detail {
+  display: flex;
+}
+
+@media (max-width: 1155px) {
+  .book-detail {
+    flex-direction: column-reverse;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+
+.book-detail .zalam-left {
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 1050px) {
+  .book-detail .zalam-left {
+    display: none;
+  }
+}
+
+.book-detail .zalam-right {
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 1050px) {
+  .book-detail .zalam-right {
+    display: none;
+  }
+}
+
+@media (max-width: 1155px) {
+  .book-detail .left img {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+.book-detail .right {
+  flex: 1;
+}
+
+.book-detail .right .inner {
+  overflow: hidden;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 30px;
+  text-align: center;
+  font-size: 15px;
+}
+
+@media (max-width: 1366px) {
+  .book-detail .right .inner {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1155px) {
+  .book-detail .right .inner {
+    margin: 10px;
+  }
+}
+
+.book-detail .right .inner h1 {
+  font-size: 18px;
+}
+
+.book-detail .right .inner h2 {
+  font-size: 15px;
+}
+
+.book-detail .right .inner table {
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+@media (max-width: 500px) {
+  .book-detail .right .inner table {
+    table-layout: fixed;
+  }
+}
+
+.book-detail .right .inner table td {
+  direction: ltr;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.book-detail .right .inner table td:first-child {
+  text-align: right;
+}
+
+.book-detail .right .inner table td:last-child {
+  text-align: left;
+}
+
+.book-detail .right .inner table td:nth-child(2) {
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.book-detail .right .inner > div {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .book-detail .right .inner > div {
+    flex-direction: column;
+  }
+}
+
+.book-detail .right .inner > div > div {
+  flex: 1;
+}
+
+.add-to-cart-modal {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.add-to-cart-modal.show {
+  opacity: 1;
+}
+
+.add-to-cart-modal .modal-con {
+  position: relative;
+  margin: auto;
+  margin-top: 50vh;
+  opacity: 0;
+  transition: all .3s;
+  max-width: 700px;
+  text-align: center;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+@media (max-width: 700px) {
+  .add-to-cart-modal .modal-con {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .add-to-cart-modal .modal-con p {
+    font-size: 12px;
+  }
+  .add-to-cart-modal .modal-con button:nth-child(2) {
+    margin-top: 10px;
+  }
+  .add-to-cart-modal .modal-con button:not(.close-btn) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.add-to-cart-modal .modal-con p {
+  font-size: 15px;
+}
+
+.add-to-cart-modal .modal-con a {
+  text-decoration: none;
+}
+
+.add-to-cart-modal .modal-con .close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.add-to-cart-modal .modal-con.show {
+  opacity: 1;
+  margin-top: 25vh;
+}
+
+@media (max-width: 700px) {
+  .add-to-cart-modal .modal-con.show {
+    margin-top: 80px;
+  }
+}

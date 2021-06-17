@@ -8,7 +8,7 @@ export default function TermsSectionTwo(){
         <div className="terms-2">
             <div className="flex-section">
                 <div>
-                    <img src={termImg} alt="term 1 image" />
+                    <img src={termImg} alt="term 1" />
                 </div>
                 <div>
                     <h2>

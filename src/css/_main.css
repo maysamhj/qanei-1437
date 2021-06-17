@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: #333;
+}
+
 .button-primary {
   background: black;
   background: linear-gradient(180deg, black 0%, #95e3ec 0%, #2baec1 100%);
@@ -13,6 +18,7 @@
   box-shadow: 0 5px 10px #95E3EC50;
   transition: all .3s;
   margin-right: 15px;
+  text-decoration: none;
 }
 
 .button-primary svg {
@@ -38,6 +44,7 @@
   box-shadow: 0 5px 10px #9EB85E50;
   transition: all .3s;
   margin-right: 15px;
+  text-decoration: none;
 }
 
 .button-secondary svg {
@@ -60,6 +67,23 @@
 .input-primary:focus {
   outline: none;
   box-shadow: 0 5px 10px #95E3ECFF;
+}
+
+.input-primary .input-inner-section {
+  border: none;
+  margin: 5px 5px;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: left;
+  text-align-last: end;
+  width: 100%;
+}
+
+.input-primary .input-inner-section.textarea {
+  resize: vertical;
+  text-align: right;
+  text-align-last: unset;
 }
 
 .button-icon {
@@ -428,5 +452,22 @@
 @media (max-width: 768px) {
   .footer-section .content .copy-right {
     text-align: center;
+  }
+}
+
+.form-fields {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+
+.form-fields > div:last-of-type {
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .form-fields {
+    font-size: 12px;
+    margin: 15px 0;
   }
 }

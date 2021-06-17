@@ -1,0 +1,189 @@
+.contact-us {
+  position: relative;
+}
+
+@media (max-width: 1366px) {
+  .contact-us {
+    overflow: hidden;
+  }
+}
+
+.contact-us .zalam {
+  position: absolute;
+  z-index: 0;
+}
+
+.contact-us .zalam-1 {
+  left: -100px;
+}
+
+@media (max-width: 700px) {
+  .contact-us .zalam-1 {
+    display: none;
+  }
+}
+
+.contact-us .zalam-2 {
+  right: -80px;
+}
+
+@media (max-width: 700px) {
+  .contact-us .zalam-2 img {
+    width: 50%;
+  }
+}
+
+.contact-us .contact-header {
+  margin: 20px 0;
+  font-family: inherit;
+}
+
+.contact-us .contact-header img {
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  .contact-us .contact-header img {
+    width: 100%;
+  }
+}
+
+.contact-us .contact-header p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  .contact-us .contact-header p {
+    font-size: 16px;
+  }
+}
+
+.contact-us .contact-body {
+  position: relative;
+  z-index: 1;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1050px) {
+  .contact-us .contact-body {
+    flex-direction: column;
+  }
+}
+
+.contact-us .contact-body .contact-info {
+  background-color: #DAE5ED;
+  flex: 1;
+  text-align: left;
+  padding: 40px 100px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1050px) {
+  .contact-us .contact-body .contact-info {
+    padding: 20px 50px;
+    margin: 0;
+  }
+}
+
+.contact-us .contact-body .contact-info ul {
+  padding: 0;
+}
+
+.contact-us .contact-body .contact-info ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.contact-us .contact-body .contact-info ul li svg {
+  width: 80px;
+  height: 80px;
+}
+
+.contact-us .contact-body .contact-info .social-media {
+  display: flex;
+  margin-left: 30px;
+  justify-content: left;
+}
+
+@media (max-width: 1050px) {
+  .contact-us .contact-body .contact-info .social-media {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+.contact-us .contact-body .contact-info .social-media button svg {
+  height: 100%;
+}
+
+.contact-us .contact-body .contact-form {
+  padding: 30px 50px;
+  margin-right: -10px;
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us .contact-body .contact-form .form-fields {
+  margin: 25px 15px;
+}
+
+@media (max-width: 700px) {
+  .contact-us .contact-body .contact-form .form-fields {
+    margin: 15px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .contact-us .contact-body .contact-form {
+    padding: 20px 20px;
+    margin: 5px;
+  }
+}
+
+.contact-us .contact-body .contact-form p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1050px) {
+  .contact-us .contact-body .contact-form p {
+    margin: 0;
+  }
+}
+
+.contact-us .contact-body .contact-form .contact-textarea span {
+  vertical-align: top;
+}
+
+.contact-us .contact-body .contact-form .contact-textarea textarea {
+  border: none;
+  width: 350px;
+  height: 200px;
+  outline: none;
+}
+
+@media (max-width: 1050px) {
+  .contact-us .contact-body .contact-form .contact-textarea textarea {
+    width: 230px;
+  }
+}
+
+.contact-us .contact-body .contact-form button {
+  display: block;
+  margin: auto;
+  padding: 10px 40px;
+}
+
+.contact-us .contact-body .contact-form button svg {
+  vertical-align: middle;
+}

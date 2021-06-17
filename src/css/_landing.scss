@@ -1,15 +1,33 @@
 .content-section{
+    .container{
+        .zalam-left{
+            position: absolute;
+            left: 0;
+            @media(max-width: 1050px){
+                left: -100px;
+                transform: scale(.6);
+                display: none;
+            }
+        }
+        .zalam-right{
+            position: absolute;
+            right: 0;
+            @media(max-width: 1050px){
+                display: none;
+            }
+        }
+    }
     
     .landing-shabak{
         padding: 30px 150px 0 50px;
         display: flex;
-        overflow: hidden;
-       
+
         @media(max-width: 1050px){
             flex-direction: column-reverse;
             padding: 15px;
         }
         .right{
+            position: relative;
             margin-left: 80px;
             @media(max-width: 1050px){
                 margin-left: 0;
@@ -41,7 +59,7 @@
                 height: 152px;
                 flex: 1;
                 margin-top: 50px;
-                left: calc(50vw - 330px);
+                right: 120px;
                 z-index: 2;
                 @media(max-width: 1050px){
                     width: unset;
@@ -53,8 +71,6 @@
                 }
                 .turning-hand{
                     img{
-                       // margin-right: -82px;
-                       // margin-top: -20px;
                        transform: translate(82px, -20px);
                     }   
                 }
@@ -83,6 +99,15 @@
             }
         }
         .left{
+            position: relative;
+            .zalam-center{
+                position: absolute;
+                top: -50px;
+                right: -220px;
+                @media(max-width: 1050px){
+                    display: none;
+                }
+            }
             img{
                 @media(max-width: 1050px){
                     width: 90%;
@@ -300,8 +325,6 @@
            
             .turning-hand{
                 img{
-                   // margin-right: -82px;
-                   // margin-top: -20px;
                    transform: translate(82px, -20px);
                 }   
             }

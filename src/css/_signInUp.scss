@@ -53,9 +53,7 @@
        align-items: center;
        justify-content: center;
        margin-bottom: -50px;
-      
-       //overflow: hidden;
-        @media (max-width:1050px){
+       @media (max-width:1050px){
             flex-direction: column;
         }
         

@@ -1,12 +1,13 @@
 import React from 'react';
 import {loginSignup, cartLogo, userBtnLogo, hamburgurMenu, closeIcon, footerTelIcon, footerEmailIcon} from './SVGIcons';
 import reboxLogo from "./images/logo.png";
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-
-
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import CartModal from './cart/CartModal';
+import { Link } from "react-router-dom";
 export default function HeaderSection() {
 
     const hamburgurCon = React.createRef();
+    const [cart, setCart]= React.useState(false)
 
 
     const [hamburugur, setHamburgur] = React.useState("");
@@ -21,25 +22,29 @@ export default function HeaderSection() {
             disableBodyScroll(hamburgurCon.current);
         }
     }
+    const cartModalHandler= ()=> {
+        setCart(!cart)
+    }
 
     return (
     <div className="header-section">
+        <CartModal cart={cart} onClose={cartModalHandler} pageMode={false}/>
         <div className="logo">
             <img src={reboxLogo} alt="rebox Logo" />
         </div>
         <div className="flex-1">
             <ul>
-                <li><a href="#id">صفحه اصلی</a></li>
-                <li><a href="#id">درباره ما</a></li>
-                <li><a href="#id">تماس با ما</a></li>
-                <li><a href="#id">پشتیبانی</a></li>
+                <li><Link to="/">صفحه اصلی</Link></li>
+                <li><Link to="/aboutUs">درباره ما</Link></li>
+                <li><Link to="/contactUs">تماس با ما</Link></li>
+                <li><Link to="/faq">پشتیبانی</Link></li>
             </ul>
         </div>
         <div className="btn-section">
             <button className="button-secondary button-icon hamburgur-btn" onClick={hamburgurMenuHandle}>{hamburgurMenu}</button>
             <button className="button-secondary button-icon">{userBtnLogo}</button>
-            <button className="button-secondary button-icon">{cartLogo}</button>
-            <button className="button-primary">{loginSignup} ورود / ثبت نام</button>
+            <button className="button-secondary button-icon" onClick={cartModalHandler} id="header-cart-btn">{cartLogo}</button>
+            <Link to="/signIn"><button className="button-primary">{loginSignup} ورود / ثبت نام</button></Link>
         </div>
         <div className={"hamburgur-menu" + hamburugur} ref={hamburgurCon}>
             <div className="hamburgur-menu-inner">
@@ -48,9 +53,9 @@ export default function HeaderSection() {
                     <div><img src={reboxLogo} alt="rebox Logo" /></div>
                     <div>
                         <ul>
-                            <li><a href="#i">درباره ما</a></li>
-                            <li><a href="#i">تماس با ما</a></li>
-                            <li><a href="#i">پشتیبانی</a></li>
+                            <li><Link onClick={hamburgurMenuHandle} to="/aboutUs">درباره ما</Link></li>
+                            <li><Link onClick={hamburgurMenuHandle} to="/contactUs">تماس با ما</Link></li>
+                            <li><Link onClick={hamburgurMenuHandle} to="/faq">پشتیبانی</Link></li>
                         </ul>
                     </div>
                     <div className="exp">

@@ -5,7 +5,7 @@ import LandingShabak from './landingShabak';
 import LandingWho from './landingWho';
 import Newsletter from './newsletter';
 
-export default function(){
+export default function Landing(){
     return (
         <div>
             <LandingShabak />

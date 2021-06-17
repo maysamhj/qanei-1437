@@ -16,7 +16,7 @@ export default function TermsSectionFour(){
                     </p>
                 </div>
                 <div>
-                    <img src={termImg} alt="term 1 image" />
+                    <img src={termImg} alt="term 1" />
                 </div>
             </div>
             <div className="bottom-section">

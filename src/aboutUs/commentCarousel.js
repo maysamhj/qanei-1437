@@ -14,8 +14,10 @@ export default function CommentCarousel(){
     React.useEffect(()=>{
         setTimeout(()=>{
             let slides = document.querySelectorAll(".comment-carousel li[aria-hidden='false']");
-            let centerSlide = Math.ceil(slides.length / 2) - 1;
-            slides[centerSlide].classList.add("center-slide");
+            if(slides.length > 0){
+                let centerSlide = Math.ceil(slides.length / 2) - 1;
+                slides[centerSlide].classList.add("center-slide");
+            }
         }, 1000);
     }, []);
 

@@ -17,7 +17,7 @@ export default function Accordion ({open, header, body}){
     return (
             <div ref={myAccordion} className="accordion" style={{height: accordionHeight}}>
                 <div onClick={AcordionHeightHandler}>
-                    <button classNّame={(accordionHeight > 40 ? "button-rotate" : "")}>{accordion1} </button>
+                    <button className={(accordionHeight > 40 ? "button-rotate" : "")}>{accordion1} </button>
                     <p>{header}</p>
                 </div>
                 <p>{body}</p>

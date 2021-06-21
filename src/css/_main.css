@@ -64,6 +64,10 @@ a {
   box-sizing: border-box;
 }
 
+.input-primary.error {
+  border: 1px solid orangered;
+}
+
 .input-primary:focus {
   outline: none;
   box-shadow: 0 5px 10px #95E3ECFF;

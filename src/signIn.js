@@ -7,8 +7,30 @@ import Zalam5 from "./images/zalam/zalam-5.png";
 import Zalam6 from "./images/zalam/zalam-6.png";
 import SignInLogo from "./images/sign-in.png";
 import { facebookIcon, googlePlusIcon, linkedinIcon, signUpIcon } from "./SVGIcons";
+import { isEmail } from "./mainFunctions";
 
 export default function SignIn(){
+
+    const [username, setUsername] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [usernameInvalid, setUsernameInvalid] = React.useState('');
+    const [passwordInvalid, setPasswordInvalid] = React.useState('');
+
+    const loginHandle = ()=>{
+        let hasErr = false;
+        if(!isEmail(username)){
+            setUsernameInvalid('نام کاربری اشتباه است');
+            hasErr = true;
+        }
+        if(password.length === 0){
+            setPasswordInvalid('لطفا رمز عبور را وارد کنید');
+            hasErr = true;
+        }
+        if(hasErr) return;
+
+        //api goes here
+    }
+
     return (
         <div className="sign-in">
     
@@ -30,14 +52,32 @@ export default function SignIn(){
                 <p>ورود به حساب کاربری</p>
                
                 <div className='input-items'>
-                    <input className="input-primary"type="email" name="email-address" placeholder="پست الکترونیک"/>
+                    <input 
+                        className={"input-primary" + (Boolean(usernameInvalid) ? " error" : "")}
+                        type="email"
+                        name="email-address"
+                        placeholder="پست الکترونیک"
+                        onClick={()=>setUsernameInvalid('')}
+                        value={username}
+                        onChange={(e)=>setUsername(e.target.value)}
+                    />
                 </div>
-                <div className="invalid-input"></div>
+                {
+                    Boolean(usernameInvalid) ? <div className="invalid-input">{usernameInvalid}</div> : null
+                }
                 <div className='input-items'>
-                    <input className="input-primary" type="password" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="رمز عبور"/>
+                    <input 
+                        className={"input-primary" + (Boolean(passwordInvalid) ? " error" : "")}
+                        type="password"
+                        placeholder="رمز عبور"
+                        onClick={()=>setPasswordInvalid('')}
+                        value={password}
+                        onChange={(e)=>setPassword(e.target.value)}
+                    />
                 </div>
-                <div className="invalid-input">رمز عبور وارد شده نامعتبر است.</div>
-                
+                {
+                    Boolean(passwordInvalid) ? <div className="invalid-input">{passwordInvalid}</div> : null
+                }
                 <div className="sign-up-link">
                     <span>حساب کاربری ندارید؟</span>
                     <Link to="signUp" className="button-link">ثبت نام کنید</Link>
@@ -48,7 +88,7 @@ export default function SignIn(){
                     <button className="button-secondary button-icon">{linkedinIcon}</button>
                     <button className="button-secondary button-icon">{facebookIcon}</button>
                 </div>
-                <button className="button-primary submit-btn">{signUpIcon} ورود</button>
+                <button className="button-primary submit-btn" onClick={loginHandle}>{signUpIcon} ورود</button>
                 
             </div>
             <div className="image-items-signup-page">

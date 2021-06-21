@@ -36,8 +36,8 @@ export default function ContactUs(){
                 </div> 
                 <div className='contact-form'>
                     <p>تماس با ما</p>
-                    <InputComponent type='text' value='هانیه صادقی' placeholder='نام و نام خانوادگی'/>
-                    <InputComponent type='text' value='info@sadeghihaniye.ir' placeholder='پست الکترونیک'/>
+                    <InputComponent type='text' placeholder='نام و نام خانوادگی'/>
+                    <InputComponent type='text' placeholder='پست الکترونیک'/>
                     <InputComponent type='textarea' value='' placeholder='متن پیغام'/>
                     
                     <button className="button-primary">{formSendIcon} ارسال</button>

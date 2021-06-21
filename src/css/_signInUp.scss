@@ -131,11 +131,12 @@
             .invalid-input{
                 color: #B10000;
                 text-align: right;
-                padding-right: 120px;
+                padding-right: 20%;
                 font-size: 12px;
+                margin-top: -10px;
                 @media (max-width:1050px){
                    
-                    padding-right: 40px;
+                    padding-right: 10%;
                 }
             }
             .sign-up-link{

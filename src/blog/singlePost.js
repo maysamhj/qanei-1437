@@ -132,7 +132,7 @@ export default function SinglePost() {
                                 <div key={"comment-" + index}>
                                     <div className="question">
                                         <div className="profile">
-                                            <img src={profilePic} />
+                                            <img src={profilePic} alt=""/>
                                             <div className="profile-info">
                                                 <p>{comment.username}</p>
                                                 <hr />
@@ -165,7 +165,7 @@ export default function SinglePost() {
                                                 
                                                     <div key={"reply-" + index + "-" + innerIndex} className="question">
                                                         <div className="profile">
-                                                            <img src={profilePic} />
+                                                            <img src={profilePic} alt=""/>
                                                             <div className="profile-info">
                                                                 <p>{reply.username}</p>
                                                                 <hr />

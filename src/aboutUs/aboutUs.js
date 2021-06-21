@@ -14,12 +14,12 @@ import E1 from "./../images/about-us/element1.png";
 export default function AboutUs(){ 
     return (
         <div className="about-us">
-            <div class="img-background">
-            <img src={E2} alt="" class="circle-green"/>
-            <img src={E7} alt="" class="shape-rope"/>
-            <img src={E6} alt="" class="shape-rope-2"/>
-            <img src={E4} alt="" class="circle-hollow"/>
-            <img src={E1} alt="" class="circle-blue"/>
+            <div className="img-background">
+            <img src={E2} alt="" className="circle-green"/>
+            <img src={E7} alt="" className="shape-rope"/>
+            <img src={E6} alt="" className="shape-rope-2"/>
+            <img src={E4} alt="" className="circle-hollow"/>
+            <img src={E1} alt="" className="circle-blue"/>
         </div>
             <div className="about-us-container">
 

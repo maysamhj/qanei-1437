@@ -5,57 +5,46 @@ import HeaderSection from './Header';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
 } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import Landing from './landingComponents/landing';
 import Terms from './termsAndCondition/terms';
-import SignUp from './signUp';
-import SignIn from './signIn';
-import AboutUs from './aboutUs/aboutUs';
-import Faq from './Faq/Faq';
 import ContactUs from './ContactUs/ContactUs';
 import Blog from './blog/Blog';
-import CartPage from './cart/CartPage';
-import Checkout from './cart/Checkout';
-import CheckoutResult from './cart/CheckoutResult';
-import BookDetail from './bookDetail/BookDetail';
-import SinglePost from './blog/singlePost';
-
+import Faq from './Faq/Faq';
+import Dashboard from './Dashboard/Dashboard'
+import AboutUs from './aboutUs/aboutUs';
+import SignIn from './signIn';
+import SignUp from './signUp';
 function App() {
+ 
+
+const history = createBrowserHistory()
+
+
   return (
-    <Router>
     <div className="app">
+      <Router>
       <div className="container">
-        <HeaderSection />
+        <HeaderSection/> 
         <div className="content-section">
-        
+      
               <Switch>
-                <Route path="/blog/post">
-                  <SinglePost />
+              <Route path="/dashboard/orders/detail">
+                  <Dashboard type="orderDetails"/>
                 </Route>
-                <Route path="/detail">
-                  <BookDetail />
+              <Route path="/dashboard/orders">
+                  <Dashboard type="orders"/>
                 </Route>
-                <Route path="/checkoutResult">
-                  <CheckoutResult />
+              <Route path="/dashboard/support">
+                  <Dashboard type="support"/>
                 </Route>
-                <Route path="/checkout">
-                  <Checkout/>
+              <Route path="/dashboard/profile">
+                  <Dashboard type="profile"/>
                 </Route>
-                <Route path="/cart">
-                  <CartPage/>
-                </Route>
-                <Route path="/blog">
-                  <Blog />
-                </Route>
-                <Route path="/contactUs">
-                  <ContactUs />
-                </Route>
-                <Route path="/faq">
-                  <Faq />
-                </Route>
-                <Route path="/aboutUs">
-                  <AboutUs />
+                <Route path="/dashboard">
+                  <Dashboard type="userDashboard"/>
                 </Route>
                 <Route path="/signIn">
                   <SignIn />
@@ -63,18 +52,34 @@ function App() {
                 <Route path="/signUp">
                   <SignUp />
                 </Route>
+                <Route path="/about">
+                  <AboutUs/>
+                </Route>
+                <Route path="/faq">
+                  <Faq/>
+                </Route>
+                <Route path="/blog">
+                  <Blog />
+                </Route>
+                <Route path="/contact">
+                  <ContactUs />
+                </Route>
                 <Route path="/terms">
                   <Terms />
                 </Route>
                 <Route path="/">
                   <Landing />
                 </Route>
+                
+                
             </Switch>
+        
         </div>
       </div>
       <FooterSection />
+      
+      </Router>
     </div>
-    </Router>
   );
 }
 
